@@ -17,17 +17,28 @@ first_odd()
 # question 3
 
 def max_num_in_list(a_list) :
-    maxium = A_list[0]
+    maxium = a_list[ 0 ]
     for i in range(len(a_list)) :
         if a_list[i] > maximum:
-            maximum = a_list[i]
+            maximum = a_list
     return maxium
 a_list = (10, 20, 30, 40, 50)
 print(max_num_in_list(a_list))
 
 # question 4
 
-def is_leap_year(a_year) :
+def is_leap_year(a_year):
+    leap = False
+
+    if year%400==0 :
+        leap = True
+    elif year%4 == 0 and year%100 != 0:
+        leap = True
+    return leap
+
+year = int(input())
+print(is_leap(year))
+
 
 # question 5
 
@@ -36,7 +47,7 @@ def is_consecutive(a_list) :
 # driver code
 a_list = [2,3,4,5,6,7]
 print(is_consecutive(a_list))
-a_list + [1,2,4,5]
+a_list = [1,2,4,5]
 print(is_consecutive(a_list))
 
 
